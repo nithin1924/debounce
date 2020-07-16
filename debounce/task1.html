@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+<body>
+    <p id=demo>0</p>
+    
+
+
+<button onclick="az(5)">incrementt</button>
+<script>
+    let value=1;
+       let abc=(incvalue)=>{document.getElementById("demo").innerHTML = value;value=value+incvalue;}
+   
+   
+   
+   
+   
+   
+   
+   const debounce =(fn,delay)=>{
+       let timer;
+        return function(...args){
+           clearTimeout(timer);
+           timer=setTimeout(()=>{fn(...args)},delay);
+       }
+   
+   }
+   
+   az=debounce(abc,1000);
+   </script>
+</body>
+</html>
