@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+<body>
+    <p id=demo>0</p>
+
+<script>
+ value=1;
+    let abc=()=>{document.getElementById("demo").innerHTML = value;value=value+1;}
+   
+   
+
+
+
+
+
+const debounce =(fn,delay)=>{
+    let timer;
+     return function(...args){
+        clearTimeout(timer);
+        timer=setTimeout(()=>{fn()},delay);
+    }
+    
+}
+
+abc=debounce(abc,3000);
+</script>
+
+
+
+<button onclick="abc()">increment</button>
+</body>
+</html>
